@@ -2,7 +2,7 @@ export type Locale = "de" | "en";
 
 export const downloadCopy = {
   de: {
-    tagline: "Dein Lauf-Coach für konstante Fortschritte",
+    tagline: "Dein Laufcoach",
     button: "App herunterladen",
     footnote: "Kostenlos starten • iOS verfügbar",
   },
