@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { BackgroundAccents } from "../components/BackgroundAccents";
+import { PageHead } from "../components/PageHead";
 import { TikTokInAppHint } from "../components/TikTokInAppHint";
 import { APP_STORE_URL } from "../lib/constants";
 import { inAppHintCopy, downloadCopy } from "../lib/i18n";
@@ -35,6 +36,7 @@ export default function DownloadPage() {
         overflow: "hidden",
       }}
     >
+      <PageHead title="KeepPushing — Download" />
       <BackgroundAccents />
       <TikTokInAppHint text={inAppHintCopy[locale]} />
 
