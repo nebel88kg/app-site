@@ -5,16 +5,17 @@ export const downloadCopy = {
     tagline: "Dein Lauf-Coach für konstante Fortschritte",
     button: "App herunterladen",
     footnote: "Kostenlos starten • iOS verfügbar",
-    inAppHint:
-      "In TikTok: Tippe oben rechts auf die 3 Punkte · Dann „Im Browser öffnen“, um KeepPushing kostenlos herunterzuladen.",
   },
   en: {
     tagline: "Your running coach for consistent progress",
     button: "Download App",
     footnote: "Start for free • Available on iOS",
-    inAppHint:
-      'On TikTok: Hit the 3 dots at the top right · Then tap "Open in Browser" to download KeepPushing for free.',
   },
+} as const;
+
+export const inAppHintCopy = {
+  de: "In TikTok: Tippe oben rechts auf die 3 Punkte · Dann „Im Browser öffnen“, um KeepPushing kostenlos herunterzuladen.",
+  en: 'On TikTok: Hit the 3 dots at the top right · Then tap "Open in Browser" to download KeepPushing for free.',
 } as const;
 
 export const landingCopy = {

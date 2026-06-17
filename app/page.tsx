@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { BackgroundAccents } from "./components/BackgroundAccents";
-import { landingCopy } from "./lib/i18n";
+import { TikTokInAppHint } from "./components/TikTokInAppHint";
+import { inAppHintCopy, landingCopy } from "./lib/i18n";
 import { useLocale } from "./lib/useLocale";
 
 const accent = "#0F9900";
@@ -28,6 +29,7 @@ export default function LandingPage() {
       }}
     >
       <BackgroundAccents />
+      <TikTokInAppHint text={inAppHintCopy[locale]} />
 
       <main
         style={{

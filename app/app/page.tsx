@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { BackgroundAccents } from "../components/BackgroundAccents";
 import { TikTokInAppHint } from "../components/TikTokInAppHint";
-import { downloadCopy } from "../lib/i18n";
+import { inAppHintCopy, downloadCopy } from "../lib/i18n";
 import { useLocale } from "../lib/useLocale";
 
 const accent = "#0F9900";
@@ -27,7 +27,7 @@ export default function DownloadPage() {
       }}
     >
       <BackgroundAccents />
-      <TikTokInAppHint text={copy.inAppHint} />
+      <TikTokInAppHint text={inAppHintCopy[locale]} />
 
       <Link
         href="/"
