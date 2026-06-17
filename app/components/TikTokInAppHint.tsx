@@ -30,8 +30,8 @@ export function TikTokInAppHint({ text }: TikTokInAppHintProps) {
           left: 0,
           right: 0,
           zIndex: 9999,
-          padding: "10px 16px",
-          paddingTop: "calc(env(safe-area-inset-top, 0px) + 28px)",
+          padding: "8px 16px",
+          paddingTop: "calc(env(safe-area-inset-top, 0px) + 14px)",
           background: "rgba(15, 153, 0, 0.15)",
           borderBottom: `1px solid rgba(15, 153, 0, 0.4)`,
           backdropFilter: "blur(10px)",
@@ -61,14 +61,14 @@ export function TikTokInAppHint({ text }: TikTokInAppHintProps) {
 
           <svg
             aria-hidden
-            width="22"
+            width="18"
             height="22"
-            viewBox="0 0 22 22"
+            viewBox="0 0 18 22"
             fill="none"
             style={{ flexShrink: 0, color: accent }}
           >
             <path
-              d="M4 18L16 6M16 6H9M16 6V13"
+              d="M9 20V4M9 4L4 9M9 4L14 9"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
@@ -80,7 +80,7 @@ export function TikTokInAppHint({ text }: TikTokInAppHintProps) {
 
       <div
         aria-hidden
-        style={{ height: "calc(env(safe-area-inset-top, 0px) + 88px)", flexShrink: 0 }}
+        style={{ height: "calc(env(safe-area-inset-top, 0px) + 72px)", flexShrink: 0 }}
       />
     </>
   );
