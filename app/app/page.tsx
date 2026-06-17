@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BackgroundAccents } from "../components/BackgroundAccents";
+import { TikTokInAppHint } from "../components/TikTokInAppHint";
 import { downloadCopy } from "../lib/i18n";
 import { useLocale } from "../lib/useLocale";
 
@@ -26,6 +27,7 @@ export default function DownloadPage() {
       }}
     >
       <BackgroundAccents />
+      <TikTokInAppHint text={copy.inAppHint} />
 
       <Link
         href="/"
