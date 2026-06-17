@@ -50,17 +50,34 @@ export function TikTokInAppHint({ text }: TikTokInAppHintProps) {
             aria-hidden
             style={{
               flexShrink: 0,
+              width: 28,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              gap: 10,
               color: accent,
-              marginTop: 2,
+              paddingTop: 2,
             }}
           >
-            <span style={{ fontSize: 16, letterSpacing: 1, lineHeight: 1 }}>•••</span>
-            <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
+            <span
+              style={{
+                fontSize: 12,
+                letterSpacing: 3,
+                lineHeight: 1,
+                display: "block",
+              }}
+            >
+              •••
+            </span>
+            <svg
+              width="16"
+              height="20"
+              viewBox="0 0 16 20"
+              fill="none"
+              style={{ display: "block", flexShrink: 0 }}
+            >
               <path
-                d="M7 0V14M7 0L2 5M7 0L12 5"
+                d="M8 18V4M8 4L3 9M8 4L13 9"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
