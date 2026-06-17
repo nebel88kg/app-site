@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
 import { BackgroundAccents } from "../components/BackgroundAccents";
 import { TikTokInAppHint } from "../components/TikTokInAppHint";
+import { APP_STORE_URL } from "../lib/constants";
 import { inAppHintCopy, downloadCopy } from "../lib/i18n";
+import { shouldShowInAppHint } from "../lib/inAppBrowser";
 import { useLocale } from "../lib/useLocale";
 
 const accent = "#0F9900";
@@ -13,6 +16,12 @@ const text = "#f5f5f5";
 export default function DownloadPage() {
   const locale = useLocale();
   const copy = downloadCopy[locale];
+
+  useEffect(() => {
+    if (!shouldShowInAppHint()) {
+      window.location.replace(APP_STORE_URL);
+    }
+  }, []);
 
   return (
     <div
@@ -65,7 +74,7 @@ export default function DownloadPage() {
 
         <div style={{ marginTop: 30 }}>
           <a
-            href="https://apps.apple.com/app/id6755646753"
+            href={APP_STORE_URL}
             style={{
               display: "inline-block",
               padding: "16px 28px",
