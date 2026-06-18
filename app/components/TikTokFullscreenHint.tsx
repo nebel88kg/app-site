@@ -51,8 +51,8 @@ export function TikTokFullscreenHint({ locale }: TikTokFullscreenHintProps) {
           aria-hidden
           style={{
             position: "absolute",
-            top: "calc(env(safe-area-inset-top, 0px) + 6px)",
-            right: 10,
+            top: "calc(env(safe-area-inset-top, 0px) + 2px)",
+            right: 28,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
