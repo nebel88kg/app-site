@@ -51,8 +51,8 @@ export function TikTokFullscreenHint({ locale }: TikTokFullscreenHintProps) {
           aria-hidden
           style={{
             position: "absolute",
-            top: "calc(env(safe-area-inset-top, 0px) + 20px)",
-            right: 28,
+            top: "calc(env(safe-area-inset-top, 0px) + 6px)",
+            right: 10,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -60,16 +60,16 @@ export function TikTokFullscreenHint({ locale }: TikTokFullscreenHintProps) {
           }}
         >
           <svg
-            width="80"
-            height="92"
-            viewBox="0 0 24 28"
+            width="96"
+            height="128"
+            viewBox="0 0 24 36"
             fill="none"
             style={{ transform: "rotate(45deg)", transformOrigin: "center" }}
           >
             <path
-              d="M12 24V4M12 4L6 10M12 4L18 10"
+              d="M12 34V2M12 2L5 10M12 2L19 10"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="1.2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
