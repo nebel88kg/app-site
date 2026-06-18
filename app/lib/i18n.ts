@@ -7,7 +7,7 @@ export const downloadCopy = {
     footnote: "Kostenlos starten • iOS verfügbar",
   },
   en: {
-    tagline: "Your running coach for consistent progress",
+    tagline: "Your running coach",
     button: "Download App",
     footnote: "Start for free • Available on iOS",
   },
@@ -16,6 +16,19 @@ export const downloadCopy = {
 export const inAppHintCopy = {
   de: "In TikTok: Tippe oben rechts auf die 3 Punkte · Dann „Im Browser öffnen“, um KeepPushing kostenlos herunterzuladen.",
   en: 'On TikTok: Hit the 3 dots at the top right · Then tap "Open in Browser" to download KeepPushing for free.',
+} as const;
+
+export const inAppFullscreenCopy = {
+  de: {
+    brand: "KeepPushing",
+    step1: "Tippe oben rechts auf die 3 Punkte",
+    step2: "Wähle „Im Browser öffnen“",
+  },
+  en: {
+    brand: "KeepPushing",
+    step1: "Tap the 3 dots at the top right",
+    step2: 'Select "Open in Browser"',
+  },
 } as const;
 
 export const landingCopy = {

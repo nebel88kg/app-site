@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect } from "react";
+import { AppLogo } from "../components/AppLogo";
 import { BackgroundAccents } from "../components/BackgroundAccents";
 import { PageHead } from "../components/PageHead";
-import { TikTokInAppHint } from "../components/TikTokInAppHint";
+import { TikTokFullscreenHint } from "../components/TikTokFullscreenHint";
 import { APP_STORE_URL } from "../lib/constants";
-import { inAppHintCopy, downloadCopy } from "../lib/i18n";
-import { shouldShowInAppHint } from "../lib/inAppBrowser";
+import { downloadCopy } from "../lib/i18n";
+import { useInAppBrowser } from "../lib/useInAppBrowser";
 import { useLocale } from "../lib/useLocale";
 
 const accent = "#0F9900";
@@ -17,12 +17,33 @@ const text = "#f5f5f5";
 export default function DownloadPage() {
   const locale = useLocale();
   const copy = downloadCopy[locale];
+  const inApp = useInAppBrowser();
 
   useEffect(() => {
-    if (!shouldShowInAppHint()) {
+    if (inApp === false) {
       window.location.replace(APP_STORE_URL);
     }
-  }, []);
+  }, [inApp]);
+
+  if (inApp === null) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          background: bg,
+        }}
+      />
+    );
+  }
+
+  if (inApp) {
+    return (
+      <>
+        <PageHead title="KeepPushing — Download" />
+        <TikTokFullscreenHint locale={locale} />
+      </>
+    );
+  }
 
   return (
     <div
@@ -38,22 +59,6 @@ export default function DownloadPage() {
     >
       <PageHead title="KeepPushing — Download" />
       <BackgroundAccents />
-      <TikTokInAppHint text={inAppHintCopy[locale]} />
-
-      <Link
-        href="/"
-        style={{
-          position: "absolute",
-          top: 24,
-          left: 24,
-          color: "#666",
-          textDecoration: "none",
-          fontSize: 14,
-          zIndex: 2,
-        }}
-      >
-        ← KeepPushing
-      </Link>
 
       <main
         style={{
@@ -70,9 +75,9 @@ export default function DownloadPage() {
           textAlign: "center",
         }}
       >
-        <h1 style={{ fontSize: 40, fontWeight: 800 }}>KeepPushing</h1>
+        <AppLogo size={104} />
 
-        <p style={{ fontSize: 18, color: "#999", marginTop: 8 }}>{copy.tagline}</p>
+        <p style={{ fontSize: 18, color: "#999", marginTop: 16 }}>{copy.tagline}</p>
 
         <div style={{ marginTop: 30 }}>
           <a
