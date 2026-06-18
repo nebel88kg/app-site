@@ -59,7 +59,13 @@ export function TikTokFullscreenHint({ locale }: TikTokFullscreenHintProps) {
             color: accent,
           }}
         >
-          <svg width="56" height="64" viewBox="0 0 24 28" fill="none">
+          <svg
+            width="80"
+            height="92"
+            viewBox="0 0 24 28"
+            fill="none"
+            style={{ transform: "rotate(45deg)", transformOrigin: "center" }}
+          >
             <path
               d="M12 24V4M12 4L6 10M12 4L18 10"
               stroke="currentColor"
